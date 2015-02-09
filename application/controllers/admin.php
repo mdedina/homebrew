@@ -32,7 +32,7 @@ class Admin extends CI_Controller {
 
 		// $data = $this->homebrew->get_all_products();
 
-		// $this->load->view("adminviews/products" /*, $data */);
+		$this->load->view("adminviews/products" /*, $data */);
 
 	}
 
