@@ -35,7 +35,7 @@
 				<h3 class='text-warning'>Home Brew Beer Supplies</h3>
 				<h4 class='text-warning'>Admin Login In</h4>
 			</div>
-			<form class='form-horizontal'>
+			<form class='form-horizontal' action='/admin/login' method='post'> 
 
 				<div class='form-group'>
 					<label for='loginemail' class='col-sm-1 col-sm-offset-5 col-xs-2 col-xs-offset-1 control-label text-warning'>email:</label>
