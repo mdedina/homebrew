@@ -16,14 +16,29 @@ class Admin extends CI_Controller {
 	public function login()
 	{
 		var_dump($this->input->post());
-		// $adminId = $this->homebrew->login($this->post());
-		// if ($admin_id) {
-		// 	$this->session->set_userdata('admin_id', $admin_id);
-		// 	$this->load->view("adminviews/products");
+		// $messages = $this->validate_login($this->input->post());
+		// if (!empty($messages)) {
+		// 	//TODO load a partial to display invalid input messages
+		// 	return;
 		// }
-		// else {
-			//TODO load a partial that indicates a login error
+
+		// $adminId = $this->homebrew->admin_login($this->post());
+		// if (!$admin_id) {
+		// 	//TODO load a partial to indicate user not found
+		// 	return;
 		// }
+
+		// $this->session->set_userdata('admin_id', $admin_id);
+
+		// $data = $this->homebrew->get_all_products();
+
+		// $this->load->view("adminviews/products" /*, $data */);
+
+	}
+
+	private function validate_login($post) {
+		//TODO check that the password follows rules
+		return "";
 	}
 
 
