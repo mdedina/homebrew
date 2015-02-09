@@ -6,19 +6,24 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->output->enable_profiler();
-		$this->load->model("homebrew");
+		// $this->load->model("homebrew");
+	}
+
+	public function index() {
+		$this->load->view('adminviews/admin');
 	}
 
 	public function login()
 	{
-		$adminId = this->homebrew->(login->post());
-		if ($admin_id) {
-			$this->session->set_userdata('admin_id', $admin_id);
-			$this->load->view("adminviews/products");
-		}
-		else {
+		var_dump($this->input->post());
+		// $adminId = $this->homebrew->login($this->post());
+		// if ($admin_id) {
+		// 	$this->session->set_userdata('admin_id', $admin_id);
+		// 	$this->load->view("adminviews/products");
+		// }
+		// else {
 			//TODO load a partial that indicates a login error
-		}
+		// }
 	}
 
 
