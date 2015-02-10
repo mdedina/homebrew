@@ -33,7 +33,9 @@ class Admin extends CI_Controller {
 
 		$data = $this->homebrew->get_all_products();
 
-		$this->load->view("adminviews/products", $data);
+		$modified_data = array("products", $modified_data);
+
+		$this->load->view("adminviews/products", $modified_data);
 
 	}
 
