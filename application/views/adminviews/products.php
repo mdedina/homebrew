@@ -35,7 +35,7 @@
 		<div class='container'>
 			<a class='navbar-brand' href'#'>DASHBOARD: <small>Home Brew Beer Supplies</small></a>
 			<p class='navbar-text'>| <a href='#' class='navbar-link'>Orders </a> |</p>
-			<p class='navbar-text'>| <a href='#' class='navbar-link'> Products</a> |</p>
+			<p class='navbar-text'>| <a href='/admin/products' class='navbar-link'> Products</a> |</p>
 			<p class='navbar-text navbar-right'><a href='#' class='navbar-link navbar-right'>log off&nbsp</a></p>
 		</div>
 	</nav>
@@ -48,7 +48,7 @@
 				</form>
 			</div>
 			<div class='col-sm-2 col-sm-offset-3'>
-				<button class='btn btn-warning btn-sm'>Add NEW Product</button>
+				<a href='/admin/add'><button class='btn btn-warning btn-sm'>Add NEW Product</button></a>
 			</div>
 		</div>
 		<div class='row'>
@@ -65,55 +65,18 @@
 						</tr>
 					</thead>
 					<tbody class='text-center table-striped'>
-						<tr>
-							<td><img src="../assets/images/beer1.jpg" alt="beerkit"></td>
-							<td>1</td>
-							<td>Beer Kit</td>
-							<td>10</td>
-							<td>5</td>
-							<td><a href='#'>edit</a> | <a href='#'>delete</a>
-						</tr>
-						<tr>
-							<td><img src="../assets/images/beer2.jpg" alt="beerkit"></td>
-							<td>2</td>
-							<td>Beer Hall Waitress Poster</td>
-							<td>10</td>
-							<td>5</td>
-							<td><a href='#'>edit</a> | <a href='#'>delete</a>
-						</tr>
-						<tr>
-							<td><img src="../assets/images/beer3.jpg" alt="beerkit"></td>
-							<td>3</td>
-							<td>Beer Ingredients</td>
-							<td>10</td>
-							<td>5</td>
-							<td><a href='#'>edit</a> | <a href='#'>delete</a>
-						</tr>
-						<tr>
-							<td><img src="../assets/images/beer4.jpg" alt="beerkit"></td>
-							<td>4</td>
-							<td>Beer Pong Kit</td>
-							<td>10</td>
-							<td>5</td>
-							<td><a href='#'>edit</a> | <a href='#'>delete</a>
-						</tr>
-						<tr>
-							<td><img src="../assets/images/beer5.jpg" alt="beerkit"></td>
-							<td>5</td>
-							<td>Beer Brewing Kit</td>
-							<td>10</td>
-							<td>5</td>
-							<td><a href='#'>edit</a> | <a href='#'>delete</a>
-						</tr>
-						<tr>
-							<td><img src="../assets/images/beer6.jpg" alt="beerkit"></td>
-							<td>6</td>
-							<td>Beer Brewing Kit</td>
-							<td>10</td>
-							<td>5</td>
-							<td><a href='#'>edit</a> | <a href='#'>delete</a>
-						</tr>
-					</tbody>
+<?php 					foreach($products as $value)
+						{
+?>						<?="<tr>
+							<td><img src='../assets/images/{$value['image_name']}' alt='beerkit'></td>
+							<td>{$value['id']}</td>
+							<td>{$value['name']}</td>
+							<td>{$value['num_in_stock']}</td>
+							<td>{$value['num_sold_prev_yr']}</td>
+							<td><a href='/admin/edit/{$value['id']}'>edit</a> | <a href='/admin/delete/{$value['id']}'>delete</a>
+						</tr>"?>
+<?php					}
+?>					</tbody>
 				</table>
 			</div>
 		</div>

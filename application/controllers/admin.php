@@ -19,7 +19,7 @@ class Admin extends CI_Controller {
 		$messages = $this->validate_login($this->input->post());
 		if (!empty($messages)) {
 			//TODO load a partial to display invalid input messages
-			return;
+			redirect('admin');
 		}
 
 		$admin_id = $this->homebrew->admin_login($this->input->post());
@@ -28,21 +28,27 @@ class Admin extends CI_Controller {
 			echo "<p>login failed</p>";
 			return;
 		}
-
 		$this->session->set_userdata('admin_id', $admin_id);
 
-		$data = $this->homebrew->get_all_products();
+		$products = $this->homebrew->get_all_products();
 
-		$modified_data = array("products", $modified_data);
+		$data = array("products" => $products);
 
-		$this->load->view("adminviews/products", $modified_data);
-
+		$this->load->view("adminviews/products", $data);
 	}
 
 	private function validate_login($post) {
 		//TODO check user and pw are not empty
 		return "";
 	}
+
+	//need products method to go back to the proucts page when toggling between orders and products
+
+	// need add method to add a new product
+
+	// need edit method to edit an existing product
+
+
 
 
 }
