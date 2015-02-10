@@ -31,11 +31,9 @@ class Admin extends CI_Controller {
 
 		$this->session->set_userdata('admin_id', $admin_id);
 
-		$data = $this->homebrew->get_all_products();
+		$products = $this->homebrew->get_all_products();
 
-		$modified_data = array("products", $modified_data);
-
-		$this->load->view("adminviews/products", $modified_data);
+		$this->load->view("adminviews/products", array("products", $products));
 
 	}
 
