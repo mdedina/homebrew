@@ -12,7 +12,7 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('userviews/show');
+		$this->load->view('adminviews/products');
 	}
 }
 
