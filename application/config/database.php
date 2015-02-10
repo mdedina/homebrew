@@ -8,14 +8,14 @@ if(ENVIRONMENT == 'production')
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'root';
 	$db['default']['password'] = '';
-	$db['default']['database'] = '';
+	$db['default']['database'] = 'beer_project_db';
 }
 else
 {
 	$db['default']['hostname'] = 'localhost';
 	$db['default']['username'] = 'root';
 	$db['default']['password'] = 'root';
-	$db['default']['database'] = '';
+	$db['default']['database'] = 'beer_project_db';
 }
 
 $db['default']['dbdriver'] = 'mysql';
