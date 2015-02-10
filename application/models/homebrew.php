@@ -18,5 +18,10 @@ class Homebrew extends CI_Model {
 		}
 
 	}
+
+	function get_all_products()
+	{
+		return $this->db->query("SELECT * FROM products ORDER BY id ASC")->result_array();
+	}
 	
 }
