@@ -220,7 +220,7 @@ CREATE TABLE `products` (
   `num_sold_prev_yr` int(11) DEFAULT NULL,
   `image_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -229,7 +229,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Beer Kit A','The deluxe version of Beer Kit B',90,3,17,'beer_kit_a.png'),(2,'Beer Kit B','The economy version of Beer Kit A',60,12,52,'beer_kit_b.png');
+INSERT INTO `products` VALUES (1,'Beer Kit','Beer Kit of your dreams',90,10,5,'beer1.jpg'),(2,'Beer Hall Waitress Poster','Beer Hall Waitress Poster of your dreams',60,10,5,'beer2.jpg'),(3,'Beer Ingredients',NULL,NULL,10,5,'beer3.jpg'),(4,'Beer Pong Kit',NULL,NULL,10,5,'beer4.jpg'),(5,'Beer Brewing Kit A',NULL,NULL,10,5,'beer5.jpg'),(6,'Beer Brewing Kit b',NULL,NULL,10,5,'beer6.jpg');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,4 +326,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-09 17:33:45
+-- Dump completed on 2015-02-09 18:16:08
