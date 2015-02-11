@@ -53,25 +53,48 @@ class Admin extends CI_Controller {
 		$this->load->view("adminviews/add");
 	}
 
-	// create a new product
+	// create a new product (i.e. handle the post from the 'add product' view)
 	public function create_product() {
-		//TODO
+		$post = $this->input->post();
+		//TODO $this->homebrew->create_product($post);
+		redirect('/admin/products');
 	}
 
 	// load the edit product view
-	public function edit_product() {
-		$this->load->view("adminviews/edit");
+	public function edit_product($product_id) {
+		//TODO $product = $this->homebrew->get_product($product_id);
+		$this->load->view("adminviews/edit" /*, $product*/);
 	}
 
-	// update a product
+	// update a product (i.e. handle the post from the 'edit product' view)
 	public function update_product() {
-		//TODO
+		$post = $this->input->post();
+		//TODO $this->homebrew->update_product($post);
+		redirect('/admin/products');
+	}
+
+	public function delete_product($product_id) {
+		//TODO $this->homebrew->delete_product($product_id);
+		redirect('/admin/products');
 	}
 
 	// load the orders view
 	public function orders() {
-		//TODO
+		//TODO $orders = $this->homebrew->get_all_orders();
+		$this->load->view("adminviews/orders" /*, array("orders" => $orders) */);
 	}
 
+	// load the show order view
+	public function show_order($order_id) {
+		//TODO $order = $this->homebrew->get_order($order_id);
+		$this->load->view("adminviews/showorder" /*, array("order" => $order)*/);
+	}
+
+	// handle the post when an order status is modified
+	public function update_order() {
+		$post = $this->input->post();
+		//TODO $this->homebrew->update_order($post);
+		redirect('/admin/orders');
+	}
 
 }
