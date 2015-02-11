@@ -6,10 +6,16 @@ class User extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->output->enable_profiler();
-		// $this->load->model("homebrew");
+		$this->load->model("homebrew");
 	}
 
 	public function index() {
-		$this->load->view('userviews/category');
+		redirect("/user/category/1");  // default to category 1
+	}
+
+	// load the category page, for category indicated by $category_id
+	public function category($category_id) {
+		//TODO $products = $this->homebrew->get_products_by_category($category_id);
+		$this->load->view('userviews/category' /*,  array("products" => $products)*/ );
 	}
 }
