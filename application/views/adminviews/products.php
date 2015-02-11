@@ -56,7 +56,7 @@
 <!-- need to update href so it goes to controller method to $this->load->view('/adminviews/add')  -->
 
 			<div class='col-sm-2 col-sm-offset-3'>
-				<a href='/admin/add'><button class='btn btn-warning btn-sm'>Add NEW Product</button></a>
+				<a href='/admin/add_product'><button class='btn btn-warning btn-sm'>Add NEW Product</button></a>
 			</div>
 		</div>
 		<div class='row'>
