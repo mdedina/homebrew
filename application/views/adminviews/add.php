@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 ?>
 <!DOCTYPE html>
@@ -41,7 +41,10 @@
 				<h3><button class="btn btn-default"><span class='glyphicon glyphicon-remove'></span></button></h3>
 			</div>
 		</div>
-		<form class='form-horizontal well'>
+
+<!-- 		need to update form action='?' to the actional admin method link -->
+
+		<form class='form-horizontal well' action='/admin/add' method='post'>
 			<div class='form-group'>
 				<label for='productname' class='col-sm-2 col-sm-offset-2 control-label'>Name</label>
 				<div class='col-sm-5'>

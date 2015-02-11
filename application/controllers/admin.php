@@ -11,7 +11,6 @@ class Admin extends CI_Controller {
 
 	// load the login page
 	public function index() {
-		// $this->session->sess_destroy();
 		$this->load->view('adminviews/admin');
 	}
 
@@ -39,7 +38,7 @@ class Admin extends CI_Controller {
 			redirect('/admin');
 		}
 
-		redirect('/admin/products');
+		redirect('/admin/orders');
 	}
 
 	// is the login data valid?
