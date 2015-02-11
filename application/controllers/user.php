@@ -13,9 +13,16 @@ class User extends CI_Controller {
 		redirect("/user/category/1");  // default to category 1
 	}
 
-	// load the category page, for category indicated by $category_id
+	// load the category page for the indicated category
 	public function category($category_id) {
 		//TODO $products = $this->homebrew->get_products_by_category($category_id);
 		$this->load->view('userviews/category' /*,  array("products" => $products)*/ );
+	}
+
+	// load the product show page for the indicated product
+	public function product_show($product_id) {
+		//TODO $products = $this->homebrew->get_products_by_category($category_id);
+		$this->load->view('userviews/category' /*,  array("products" => $products)*/ );
+		
 	}
 }
