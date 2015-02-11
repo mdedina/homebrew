@@ -5,12 +5,21 @@ class Admin extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 		$this->load->model("homebrew");
 	}
 
 	public function index() {
-		$this->load->view('adminviews/admin');
+		if(empty($this->session->userdata['admin_id']))
+		{
+			$this->session->set_userdata('admin_id', '');
+		}
+		if(empty($this->session->userdata['is_valid']))
+		{
+			$this->session->set_userdata('is_valid', true);
+		}
+		
+		$this->load->view('adminviews/retrieveorder');
 	}
 
 	/*
@@ -31,7 +40,7 @@ class Admin extends CI_Controller {
 			redirect('/admin');
 		}
 
-		redirect('/admin/products');
+		redirect('/admin/orders');
 	}
 
 	// is the login data valid?

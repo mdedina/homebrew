@@ -1,11 +1,11 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ADMIN</title>
+	<title>DASHBOARD: Products</title>
 
 	<link rel="stylesheet" href="../assets/css/bootstrap.css">
 	<style>
@@ -41,12 +41,20 @@
 	</nav>
 	<div class='container-fluid'>
 		<div class='row'>
+			<div class='col-sm-12'>
+				<h1 class='text-center text-warning'>PRODUCTS</h1>
+			</div>
+		</div>		
+		<div class='row'>
 			<div class='col-sm-6 col-sm-offset-0'>
 				<form class='form-inline'>
 					<input class='form-control' type='text'placeholder='search'/>
 					<button class='btn btn-warning btn-sm'><i class='glyphicon glyphicon-search'></i></button>
 				</form>
 			</div>
+
+<!-- need to update href so it goes to controller method to $this->load->view('/adminviews/add')  -->
+
 			<div class='col-sm-2 col-sm-offset-3'>
 				<a href='/admin/add'><button class='btn btn-warning btn-sm'>Add NEW Product</button></a>
 			</div>
@@ -64,6 +72,9 @@
 							<th class='text-center'>ACTION</th>
 						</tr>
 					</thead>
+
+<!-- need to update the 'edit' and 'delete' href='#' so it goes to controller method and pass the product id as parameter  -->
+
 					<tbody class='text-center table-striped'>
 <?php 					foreach($products as $value)
 						{
@@ -73,13 +84,16 @@
 							<td>{$value['name']}</td>
 							<td>{$value['num_in_stock']}</td>
 							<td>{$value['num_sold_prev_yr']}</td>
-							<td><a href='/admin/edit/{$value['id']}'>edit</a> | <a href='/admin/delete/{$value['id']}'>delete</a>
+							<td><a href='/admin/edit/{$value['id']}'>edit</a> | <a href='/admin/delete/{$value['id']}'>delete</a></td>
 						</tr>"?>
 <?php					}
 ?>					</tbody>
 				</table>
 			</div>
 		</div>
+
+<!-- pagination not working and unsure on how to format this markup so it works -->
+
 		<div class='row text-center'>
 			<div class='col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2'>
 				<ul class='pagination pagination-sm'>
