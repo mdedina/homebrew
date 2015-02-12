@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Category</title>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="../assets/css/bootstrap.css">
 	<style>
 	#search-input{
@@ -66,7 +66,7 @@
 
 				<div class='row pull-left'>
 					<div class='col-md-2 col-sm-4 col-xs-6'>
-						 <a href="/user/retrieve/id">
+						 <a href="/user/product_show/1">
 						 	<div class="thumbnail">
      					 		<img src="../assets/images/beer1.jpg" alt="beerkit">
      					 		<h5 class='text-center'>Name of product</h5>

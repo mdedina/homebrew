@@ -9,34 +9,32 @@ class Admin extends CI_Controller {
 		$this->load->model("homebrew");
 	}
 
+	// load the login page
 	public function index() {
-		if(empty($this->session->userdata['admin_id']))
-		{
-			$this->session->set_userdata('admin_id', '');
-		}
-		if(empty($this->session->userdata['is_valid']))
-		{
-			$this->session->set_userdata('is_valid', true);
-		}
-		
-		$this->load->view('adminviews/retrieveorder');
+		$this->load->view('adminviews/admin');
 	}
 
 	/*
 	 * After login:
-	 * 	'is_valid' will be TRUE if the input data was valid, else FALSE.
-	 *  'admin_id' will contain the user id if logon was successful, else empty.
+	 * 	'badinput' will be TRUE if the input data was empty, else FALSE.
+	 *  'loginfailed' will be TRUE if the username/password were not in the database.
+	 *  'adminid' will contain the user id if logon was successful, else 0;
 	 */
 	public function login()
 	{
-		$this->session->set_userdata('admin_id', "");
-		$this->session->set_userdata('is_valid', $this->validate_login($this->input->post()));
+		$this->session->set_userdata('adminid', 0);
+		$badinput = !$this->validate_login($this->input->post());
+		$this->session->set_flashdata('badinput', $badinput);
 
-		if ($this->session->userdata('is_valid')) {
-			$this->session->set_userdata('admin_id', $this->homebrew->admin_login($this->input->post()));
+		if (!$badinput) {
+			$id = $this->homebrew->admin_login($this->input->post());
+			$this->session->set_userdata('adminid', $id);
+			if ($id == 0) {
+				$this->session->set_flashdata('loginfailed', TRUE);
+			}
 		}
 
-		if (empty($this->session->userdata('admin_id'))) {
+		if (!$this->session->userdata('adminid')) {
 			redirect('/admin');
 		}
 

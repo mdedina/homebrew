@@ -59,23 +59,17 @@
 		<div class='row'>
 			<div class='col-md-5 col-md-offset-5 col-sm-5 col-sm-offset-5 
 						col-xs-7 col-xs-offset-4'>
-				
-<?php 			if(!$this->session->userdata('is_valid'))
-				{
-?>					<div class="alert alert-danger" role="alert">
-						<h5 class='text-center'>Log In Error. Please enter an email and or password.</h5>					
-					</div>
-<?php				$this->session->set_userdata('is_valid', false);
-				}
-				if(!$this->session->userdata('admin_id'))
-				{
-?>					<div class="alert alert-danger" role="alert">
-						<h5 class='text-center'>Log In Error. Invalid email and or password.</h5>	
-					</div>
-<?php 				
-				}	
-?>				</div>
 
+			<?if($this->session->flashdata('loginfailed')):?>
+				<div class="alert alert-danger" role="alert">
+					<h5 class='text-center'>Log In Error. Your email or password are invalid.</h5>
+				</div>
+			<?endif?>
+			<?if($this->session->flashdata('badinput')):?>
+				<div class="alert alert-danger" role="alert">
+					<h5 class='text-center'>Log In Error. Please enter an email and or password.</h5>
+				</div>
+			<?endif?>
 
 			</div>
 		</div>

@@ -44,7 +44,7 @@
 
 <!-- 		need to update form action='?' to the actional admin method link -->
 
-		<form class='form-horizontal well' action='/admin/add' method='post'>
+		<form class='form-horizontal well' action='/admin/create_product' method='post'>
 			<div class='form-group'>
 				<label for='productname' class='col-sm-2 col-sm-offset-2 control-label'>Name</label>
 				<div class='col-sm-5'>
@@ -160,7 +160,7 @@
 				<div class='col-sm-6 col-sm-offset-4 col-xs-6 col-xs-offset-2'>
 					<a href='#' class='btn btn-warning btn-lg'>Cancel</a>
 					<input type='submit' href='#' class='btn btn-success btn-lg' name='preview' value='Preview'/>
-					<input type='submit' href='#' class='btn btn-primary btn-lg' name='preview' value='Update'/>
+					<input type='submit' href='#' class='btn btn-primary btn-lg' name='preview' value='Create'/>
 				</div>
 			</div>
 		</form>

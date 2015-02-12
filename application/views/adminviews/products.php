@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DASHBOARD: Products</title>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="../assets/css/bootstrap.css">
 	<style>
 	.container-fluid{
@@ -34,7 +34,7 @@
 	<nav class='navbar navbar-inverse'>
 		<div class='container'>
 			<a class='navbar-brand' href'#'>DASHBOARD: <small>Home Brew Beer Supplies</small></a>
-			<p class='navbar-text'>| <a href='#' class='navbar-link'>Orders </a> |</p>
+			<p class='navbar-text'>| <a href='/admin/orders' class='navbar-link'>Orders </a> |</p>
 			<p class='navbar-text'>| <a href='/admin/products' class='navbar-link'> Products</a> |</p>
 			<p class='navbar-text navbar-right'><a href='#' class='navbar-link navbar-right'>log off&nbsp</a></p>
 		</div>
@@ -84,7 +84,7 @@
 							<td>{$value['name']}</td>
 							<td>{$value['num_in_stock']}</td>
 							<td>{$value['num_sold_prev_yr']}</td>
-							<td><a href='/admin/edit/{$value['id']}'>edit</a> | <a href='/admin/delete/{$value['id']}'>delete</a></td>
+							<td><a href='/admin/edit_product/{$value['id']}'>edit</a> | <a href='/admin/delete/{$value['id']}'>delete</a></td>
 						</tr>"?>
 <?php					}
 ?>					</tbody>
