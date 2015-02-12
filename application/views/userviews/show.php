@@ -6,8 +6,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Category</title>
-
-	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/bootstrap.css">
 	<style>
 	.gallery{
 		width: 90%;
@@ -42,14 +42,14 @@
 		</div>
 		<div class='row'>
 			<div class='col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12'>
-				<img class='image-responsive' src="../assets/images/beer6.jpg">
+				<img class='image-responsive' src="/assets/images/beer6.jpg">
 				<table>
 					<tbody>
-					<td><a href='#'><img class='gallery' src="../assets/images/beer6.jpg"></a></td>
-					<td><a href='#'><img class='gallery' src="../assets/images/beer6.jpg"></a></td>
-					<td><a href='#'><img class='gallery' src="../assets/images/beer6.jpg"></a></td>
-					<td><a href='#'><img class='gallery' src="../assets/images/beer6.jpg"></a></td>
-					<td><a href='#'><img class='gallery' src="../assets/images/beer6.jpg"></a></td>
+					<td><a href='#'><img class='gallery' src="/assets/images/beer6.jpg"></a></td>
+					<td><a href='#'><img class='gallery' src="/assets/images/beer6.jpg"></a></td>
+					<td><a href='#'><img class='gallery' src="/assets/images/beer6.jpg"></a></td>
+					<td><a href='#'><img class='gallery' src="/assets/images/beer6.jpg"></a></td>
+					<td><a href='#'><img class='gallery' src="/assets/images/beer6.jpg"></a></td>
 					</tbody>
 				</table>
 			</div>
@@ -90,7 +90,7 @@
 			<div class='col-md-2 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-6'>
 				 <a href='/user/retrieve/id'>
 				 	<div class="thumbnail thumbnail-sm pull-right">
-					 	<img src="../assets/images/beer1.jpg" alt="beerkit">
+					 	<img src="/assets/images/beer1.jpg" alt="beerkit">
 					 	<h5 class='text-center'>Name of product</h5>
 					</div>
 				</a>
@@ -98,7 +98,7 @@
 			<div class='col-md-2 col-sm-4 col-xs-6'>
 				 <a href='/user/retrieve/id'>
 					 <div class="thumbnail thumbnail-sm pull-right">
- 					 	<img src="../assets/images/beer2.jpg" alt="beerkit">
+ 					 	<img src="/assets/images/beer2.jpg" alt="beerkit">
  					 	<h5 class='text-center'>Name of product</h5>
  					</div>
 				</a>
@@ -106,7 +106,7 @@
 			<div class='col-md-2 col-sm-4 col-xs-6'>
 				 <a href='/user/retrieve/id'>
 					 <div class="thumbnail thumbnail-sm pull-right">
- 					 	<img src="../assets/images/beer3.jpg" alt="beerkit">
+ 					 	<img src="/assets/images/beer3.jpg" alt="beerkit">
  					 	<h5 class='text-center'>Name of product</h5>
  					</div>
 				</a>
@@ -114,7 +114,7 @@
 			<div class='col-md-2 col-sm-4 col-xs-6'>
 				 <a href='/user/retrieve/id'>
 					 <div class="thumbnail thumbnail-sm pull-right">
- 					 	<img src="../assets/images/beer4.jpg" alt="beerkit">
+ 					 	<img src="/assets/images/beer4.jpg" alt="beerkit">
  					 	<h5 class='text-center'>Name of product</h5>
  					</div>
 				</a>
@@ -122,7 +122,7 @@
 			<div class='col-md-2 col-sm-4 col-xs-6'>
 				 <a href='/user/retrieve/id'>
 					 <div class="thumbnail thumbnail-sm pull-right">
- 					 	<img src="../assets/images/beer5.jpg" alt="beerkit">
+ 					 	<img src="/assets/images/beer5.jpg" alt="beerkit">
  					 	<h5 class='text-center'>Name of product</h5>
  					</div>
 				</a>

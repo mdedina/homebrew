@@ -10,9 +10,6 @@ class User extends CI_Controller {
 	}
 
 	public function index() {
-<<<<<<< HEAD
-		$this->load->view('userviews/success');
-=======
 		redirect("/user/category/1");  // default to category 1
 	}
 
@@ -20,13 +17,12 @@ class User extends CI_Controller {
 	public function category($category_id) {
 		//TODO $products = $this->homebrew->get_products_by_category($category_id);
 		$this->load->view('userviews/category' /*,  array("products" => $products)*/ );
->>>>>>> 553a6422fac11ab2c85c4d9988020eb38401f1ae
 	}
 
 	// load the product show page for the indicated product
 	public function product_show($product_id) {
 		//TODO $products = $this->homebrew->get_products_by_category($category_id);
-		$this->load->view('userviews/category' /*,  array("products" => $products)*/ );
+		$this->load->view('userviews/show' /*,  array("products" => $products)*/ );
 		
 	}
 }
