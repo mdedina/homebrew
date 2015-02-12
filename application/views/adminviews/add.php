@@ -60,6 +60,19 @@
 			<div class='form-group'>
 				<label for='productdesc' class='col-sm-2 col-sm-offset-2 control-label'>Categories</label>
 				<div class='btn-group col-sm-5'>
+					<select class='form-control' name='category'>
+						<option>Kits</option>
+						<option>Equipment</option>
+						<option>Ingredients</option>
+						<option>Bottling</option>
+						<option>Apparel</option>
+					</select>
+
+
+<!-- 					-Use this code potentially with ajax 
+				or just start over unsure how to make edit and delete category work-
+						
+
 					<button type='button' class='btn btn-default dropdown-toggle btn-block'
 							data-toggle='dropdown' aria-expanded='false'>
 							Categories <span class='caret'></span>
@@ -95,7 +108,7 @@
 							<span class='glyphicon glyphicon-pencil pull-right'>&nbsp</span>
 							</a>
 						</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 			<div class='form-group'>
